@@ -12,6 +12,7 @@
     <link rel="icon" href="asets/Logos/Academlo logo.png">
 
     <link rel="stylesheet" href="asets/css/style.css">
+    <script defer src="js/app.js"></script>
 </head>
 
 <body>
@@ -24,12 +25,12 @@
             <i class='bx bx-menu bx-md'></i>
         </label>
 
-        <ul class="nav-menu">
-            <li class="nav-item">Home</li>
-            <li class="nav-item">Acerca de mi</li>
-            <li class="nav-item">Mis habilidades</li>
-            <li class="nav-item">Mis proyectos</li>
-            <li class="nav-item">Contacto</li>
+        <ul type="checkbox" id="btn-close" class="nav-menu">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#forme">Acerca de mi</a></li>
+            <li class="nav-item"><a href="#habilities">Mis habilidades</a></li>
+            <li class="nav-item"><a href="#projects">Mis proyectos</a></li>
+            <li class="nav-item"><a href="#contact">Contacto</a></li>
         </ul>
 
     </nav>
@@ -38,13 +39,13 @@
 
         <div class="header-content">
 
-            <section class="header-information">
-
-                <section>
-                    <!--<div>
+            <section class="header-information" id="home">
+                <!--<div>
                         <img id="Rectangle" src="asets/Vectores/Rectangle 34-1.svg" alt="">
                         
-                    </div>-->
+                </div>-->
+
+                <div>
                     <div>
                         <h1>Cesar Rios</h1>
 
@@ -57,16 +58,20 @@
                     </div>
                     <div class="social-conteiner">
                         <article>
-                            <a href="https://www.linkedin.com/in/%EA%A7%81cesar-rios%EA%A7%82-b82672261/" target="_blank"><img src="asets/iconos/linkedin.svg" alt="icon-linkedin"></a>
+                            <a href="https://www.linkedin.com/in/%EA%A7%81cesar-rios%EA%A7%82-b82672261/"
+                                target="_blank"><img src="asets/iconos/linkedin.svg" alt="icon-linkedin"></a>
                         </article>
                         <article>
-                            <a href="https://www.instagram.com/" target="_blank"><img src="asets/iconos/instagram.svg" alt="icon-instagram"></a>
+                            <a href="https://www.instagram.com/" target="_blank"><img src="asets/iconos/instagram.svg"
+                                    alt="icon-instagram"></a>
                         </article>
                         <article>
-                            <a href="https://twitter.com/" target="_blank"><img src="asets/iconos/twitter.svg" alt="icon-twitter"></a>
+                            <a href="https://twitter.com/" target="_blank"><img src="asets/iconos/twitter.svg"
+                                    alt="icon-twitter"></a>
                         </article>
                     </div>
-                </section>
+                </div>
+
                 <section class="img-container">
                     <div>
                         <img id="perfil-photo" src="asets/Logos/perfil-img.jpg" alt="photo-mobile">
@@ -76,8 +81,8 @@
         </div>
     </header>
 
-    <div class="page-content" to="/acerda de mi">
-        <section class="words">
+    <div class="page-content">
+        <section class="words" id="forme">
             <div>
                 <h2>
                     Acerca de mi
@@ -108,7 +113,7 @@
             </section> -->
 
             <section class="academlo">
-                <article>
+                <article >
                     <img id="icon-A" src="asets/Logos/logo_academlo 5.png" alt="academlo-logo">
                 </article>
                 <div>
@@ -204,76 +209,84 @@
             </section>
         </section>
     </div> -->
-    <section>
-        <div class="pharse-skills">
-            <h2>
-                Mis habilidades
-            </h2>
-        </div>
-    </section>
-    <div class='container-skills'>
 
-        <!-- <div class="rectangle-skill-container" >
-            <img class="rectangle-skill" src="asets/Vectores/Rectangle 34-1.svg" alt="">
-        </div> -->
+    <div>
+        <section id="habilities">
+            <div class="pharse-skills">
+                <h2>
+                    Mis habilidades
+                </h2>
+            </div>
+        </section>
+        <div class='container-skills'>
 
-        <div class='container'>
+            <!-- <div class="rectangle-skill-container" >
+                <img class="rectangle-skill" src="asets/Vectores/Rectangle 34-1.svg" alt="">
+            </div> -->
 
-            <div class='skills'>
-                <span class="Name">Html</span>
-                <div class="percent">
-                    <div class="progress" style="width: 80%; background: linear-gradient( 45deg, #3bc0ff, #33ff00  );"></div>
+            <div class='container'>
+
+                <div class='skills'>
+                    <span class="Name">Html</span>
+                    <div class="percent">
+                        <div class="progress"
+                            style="width: 80%; background: linear-gradient( 45deg, #3bc0ff, #33ff00  );"></div>
+                    </div>
+                    <span class="Value">80%</span>
+
                 </div>
-                <span class="Value">80%</span>
+
+            </div>
+
+            <div class='container'>
+
+                <div class='skills'>
+                    <span class='Name'>css</span>
+                    <div class='percent'>
+                        <div class='progress'
+                            style="width: 50%; background: linear-gradient( 45deg, #ffee54, #ff00ca );"></div>
+                    </div>
+                    <span class='Value'>50%</span>
+
+                </div>
+
+            </div>
+
+            <div class='container'>
+
+                <div class='skills'>
+                    <span class='Name'>javascript</span>
+                    <div class='percent'>
+                        <div class='progress'
+                            style="width: 45%; background: linear-gradient( 45deg, #22ffde, #2196f3 );"></div>
+                    </div>
+                    <span class='Value'>45%</span>
+
+                </div>
+
+            </div>
+
+            <div class='container'>
+
+                <div class='skills'>
+                    <span class='Name'>react</span>
+                    <div class='percent'>
+                        <div class='progress'
+                            style="width: 60%; background: linear-gradient( 45deg, #1fe6ff, #673AB7 );"></div>
+                    </div>
+                    <span class='Value'>60%</span>
+
+                </div>
 
             </div>
 
         </div>
-
-        <div class='container'>
-
-            <div class='skills'>
-                <span class='Name'>css</span>
-                <div class='percent'>
-                    <div class='progress' style="width: 50%; background: linear-gradient( 45deg, #ffee54, #ff00ca );" ></div>
-                </div>
-                <span class='Value'>50%</span>
-
-            </div>
-
-        </div>
-
-        <div class='container'>
-
-            <div class='skills'>
-                <span class='Name'>javascript</span>
-                <div class='percent'>
-                    <div class='progress' style="width: 45%; background: linear-gradient( 45deg, #22ffde, #2196f3 );"></div>
-                </div>
-                <span class='Value'>45%</span>
-
-            </div>
-
-        </div>
-
-        <div class='container'>
-
-            <div class='skills'>
-                <span class='Name'>react</span>
-                <div class='percent'>
-                    <div class='progress' style="width: 60%; background: linear-gradient( 45deg, #1fe6ff, #673AB7 );"></div>
-                </div>
-                <span class='Value'>60%</span>
-
-            </div>
-
-        </div>
-
     </div>
+
 
     <aside class="portafolio">
         <div>
-            <section class="briefcase">
+            <section class="briefcase" id="projects">
                 <h2>
                     Mis Proyectos
                 </h2>
@@ -282,38 +295,43 @@
         <div class="portafolio-conteiner">
             <section class="portafolio-img">
                 <div>
-                    <a href="https://weathing-app.netlify.app" target="_blank"><img src="asets/Logos/wheather app.png" alt=""></a>
+                    <a href="https://weathing-app.netlify.app" target="_blank"><img src="asets/Logos/wheather app.png"
+                            alt=""></a>
                 </div>
             </section>
 
             <section class="portafolio-img">
                 <div>
-                    <a href="https://e-commerce-react-tecnology.netlify.app" target="_blank"><img src="asets/Logos/e-commerce-react.png" alt=""></a>
+                    <a href="https://e-commerce-react-tecnology.netlify.app" target="_blank"><img
+                            src="asets/Logos/e-commerce-react.png" alt=""></a>
                 </div>
 
             </section>
 
             <section class="portafolio-img">
                 <div>
-                    <a href="https://poke-dex-trainer.netlify.app/#/" target="_blank"><img src="asets/Logos/poke-dex.png" alt=""></a>
+                    <a href="https://poke-dex-trainer.netlify.app/#/" target="_blank"><img
+                            src="asets/Logos/poke-dex.png" alt=""></a>
                 </div>
 
             </section>
             <section class="portafolio-img">
                 <div>
-                    <a href="https://pharses-and-ramdom-color.netlify.app" target="_blank"><img src="asets/Logos/pharse-and-color-random.png" alt=""></a>
+                    <a href="https://pharses-and-ramdom-color.netlify.app" target="_blank"><img
+                            src="asets/Logos/pharse-and-color-random.png" alt=""></a>
                 </div>
 
             </section>
             <section class="portafolio-img">
                 <div>
-                    <a href="https://app-rick-and-morty-api.netlify.app" target="_blank"><img src="asets/Logos/rick-and-morty.png" alt=""></a>
+                    <a href="https://app-rick-and-morty-api.netlify.app" target="_blank"><img
+                            src="asets/Logos/rick-and-morty.png" alt=""></a>
                 </div>
 
             </section>
         </div>
     </aside>
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div>
             <div>
                 <h2>
@@ -355,7 +373,7 @@
         <div>
             <section class="final">
                 <nav>
-                    Hecho con "U+2192"en Academlo
+                    Hecho en Academlo
                 </nav>
             </section>
         </div>
