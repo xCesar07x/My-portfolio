@@ -124,6 +124,10 @@ body {
  transition: .3s;
 }
 
+.social-conteiner{
+    position: relative;
+}
+
 #btn-menu:checked~.nav-menu {
     left: 0;
 }
@@ -137,6 +141,7 @@ body {
 
 #perfil-photo{
     object-fit: contain;
+    position: relative;
 }
 
 
@@ -153,10 +158,9 @@ body {
 }
 
 .header-content h1 {
-
     font-size: 3.1rem;
     padding-bottom: 1rem;
-
+    position: relative;
 }
 
 .header-content h2 {
@@ -165,27 +169,22 @@ body {
     max-width: 600px;
     color: var(--gray);
     padding-bottom: 1rem;
+    position: relative;
 }
-
-/*.header-content h3{
-    
-}*/
 
 .header-content h4 {
-
     color: var(--gray);
     padding-bottom: 1rem;
+    position: relative;
 }
 
-
 span {
-
     color: var(--yellow);
     font-size: 1rem;
+    position: relative;
 }
 
 #icon-A{
- cursor: pointer;
  animation: load 1s infinite;
 }
 
@@ -342,6 +341,7 @@ span {
 
 .pharse-skills h2 {
     color: var(--white);
+    z-index: 10;
 }
 
 .container-skills {
@@ -382,7 +382,7 @@ span {
 .container .skills:hover{
    opacity: 1;
    transform: scale(1.1,1.1);
-   transition: all .3s ease .2s;
+   transition: all .3s ease .1s;
 }
 
 .container .skills:before {
@@ -456,17 +456,21 @@ span {
 }
 
 .rectangle-skill-container{
+ width: 65%;
+ /* height: 100vh; */
  position: relative;
  left: 0;
  top: 0;
- border: 3px dashed yellow;
- width: 50%;
-
+ /* border: 3px dashed yellow; */
+ /* width: 100vh; */
 }
 
 .rectangle-skill{
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    left: -30vw;
+    top: -17vh;
     
 }
 
@@ -484,11 +488,11 @@ span {
     height: 100%;
 }
 
-.portafolio-img div:hover{
+/* .portafolio-img div:hover{
   transform: scale(0.9);
   transition: .5s;
 
-}
+} */
 
 .briefcase h2 {
     color: var(--white);
@@ -500,12 +504,65 @@ span {
     padding: 1rem 1.5rem 5rem;
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
+    column-gap: 3rem;
 }
 
-.portafolio-img {
-    display: flex;
+.card{
+    height: 80%;
+    width: 100%;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+.card img{
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    
+}
+
+.intro{
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 40px;
+    padding: 6px;
+    background: rgb(27, 27, 27, .5);
+    color: #e5e5e5;
+}
+
+.intro h1{
+    margin: 3px;   
+}
+
+.intro p{
+    margin: 3px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    font-size: smaller;
+}
+
+.card:hover{
+  cursor: pointer;
+  background: #000;
+ 
+}
+
+.card:hover .intro{
+    height: 80%;
+    width: 100%;
+    bottom: 80px;
+    background: #000;
+    transition: linear .3s;
+}
+
+.card:hover p{
+    background: #000;
+    opacity: 1;
+    visibility: visible;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -643,8 +700,10 @@ span {
 
 #Rectangle {
     position: absolute;
-    top: 0;
-    right: 0;
+    right: 0px;
+    width: 50%;
+    height: 90%;
+    top: 4vw;
 }
 
 /*viewBox="0 0 282 400"*/
@@ -652,10 +711,7 @@ span {
 /*heigth:405px*/
 
 @media only screen and (max-width: 600px) {
-    #Rectangle {
-        width: 355px;
-        height: 405px;
-    }
+    
 
     .footer h2 {
         padding-bottom: 1.5rem;
@@ -678,10 +734,7 @@ span {
 }
 
 @media only screen and (min-width: 600px) {
-    #Rectangle {
-        width: 355px;
-        height: 405px;
-    }
+
 
     #perfil-photo {
         width: 200px;
@@ -705,10 +758,6 @@ span {
 }
 
 @media only screen and (min-width: 768px) {
-    #Rectangle {
-        width: 442px;
-        height: 405px;
-    }
 
     .footer h2 {
         padding-bottom: 1.5rem;
@@ -788,11 +837,6 @@ span {
         align-items: center;
     }
 
-    #Rectangle {
-        width: 355px;
-        height: 695px;
-    }
-
     .words h3 {
         font-size: 1.5rem;
     }
@@ -815,11 +859,6 @@ span {
 @media only screen and (min-width: 1024px) {}
 
 @media only screen and (min-width: 1200px) {
-    #Rectangle {
-        width: 500px;
-        height: 690px;
-
-    }
 
     .words h3 {
         font-size: 1.5rem;
@@ -829,8 +868,6 @@ span {
         width: 700px;
 
     }
-
-
 
 }
 
@@ -874,12 +911,6 @@ span {
         width: 200px;
         height: 213px;
     }
-
-    #Rectangle {
-        width: 270px;
-        height: 450px;
-    }
-
 
 }
 
