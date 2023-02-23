@@ -38,8 +38,6 @@ section[id]{
 
 img {
     max-width: 100%;
-
-
 }
 
 body {
@@ -218,6 +216,8 @@ span {
     justify-content: space-between;
     text-align: center;
     padding: 1rem 1.5rem 5rem;
+    position: relative;
+    z-index: 15;
 
 }
 
@@ -225,19 +225,15 @@ span {
     padding: 3rem;
     color: var(--white);
     font-size: 3rem;
-
 }
 
 .words h3 {
-
     max-width: 992px;
     color: var(--gray);
-
 }
 
 .UVM {
     padding: 5rem;
-
 }
 
 .UVM h3 {
@@ -286,8 +282,6 @@ span {
     justify-content: space-around;
     padding-right: 1.5rem;
     gap: 3rem;
-
-
 }
 
 .content {
@@ -298,7 +292,6 @@ span {
     gap: 3rem;
     font-size: x-small;
     padding-right: 0.5rem;
-
 }
 
 /*------------------------------------------------------------------------------------------------------------*/
@@ -376,14 +369,11 @@ span {
     padding: 20px 10px 18px;
     background: linear-gradient(#616161 0%, #333 10%, #222);
     border-radius: 1rem;
+    
 }
 
 
-.container .skills:hover{
-   opacity: 1;
-   transform: scale(1.1,1.1);
-   transition: all .3s ease .1s;
-}
+
 
 .container .skills:before {
     content: '';
@@ -395,7 +385,6 @@ span {
     height: 50%;
     background: rgba(255, 255, 255, .1);
     z-index: 10;
-
 }
 
 .container .skills .Name {
@@ -471,7 +460,6 @@ span {
     height: 100vh;
     left: -30vw;
     top: -17vh;
-    
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -488,11 +476,6 @@ span {
     height: 100%;
 }
 
-/* .portafolio-img div:hover{
-  transform: scale(0.9);
-  transition: .5s;
-
-} */
 
 .briefcase h2 {
     color: var(--white);
@@ -501,7 +484,7 @@ span {
 }
 
 .portafolio-conteiner {
-    padding: 1rem 1.5rem 5rem;
+    padding: 1rem 2rem 5rem;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     column-gap: 3rem;
@@ -515,11 +498,9 @@ span {
 }
 
 .card img{
-    
     height: 100%;
     width: 100%;
-    border-radius: 3px;
-    
+    border-radius: 0px;
 }
 
 .intro{
@@ -532,6 +513,8 @@ span {
     background: rgb(27, 27, 27, .5);
     color: #e5e5e5;
 }
+
+
 
 .intro h1{
     margin: 3px;   
@@ -548,20 +531,10 @@ span {
 .card:hover{
   cursor: pointer;
   background: #000;
- 
-}
-
-.card:hover .intro{
-    height: 80%;
-    width: 100%;
-    bottom: 80px;
-    background: #000;
-    transition: linear .3s;
 }
 
 .card:hover p{
-    background: #000;
-    opacity: 1;
+    /* background: #000; */
     visibility: visible;
 }
 
@@ -586,7 +559,6 @@ span {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    /*padding: 3rem 1.5rem 3rem 1.5rem;*/
 }
 
 .contac img {
@@ -617,7 +589,6 @@ span {
     align-items: center;
     text-align: center;
     padding: 3rem 1.5rem 3rem 1.5rem;
-
 }
 
 .email h2 {
@@ -677,42 +648,24 @@ span {
 
 /*************************************************************************************************************************************************************************************/
 
-/*#perfil-photo{
-    
-    
-    
-    
-    
-}*/
-/*560 x 536*/
-/*200 x 213*/
+
 .social-conteiner {
     background-color: transparent;
     display: flex;
     gap: 1.1rem;
     justify-content: center;
-
-
-
 }
-
-
 
 #Rectangle {
     position: absolute;
     right: 0px;
     width: 50%;
-    height: 90%;
+    height: 100%;
     top: 4vw;
 }
 
-/*viewBox="0 0 282 400"*/
-/*width: 355px*/
-/*heigth:405px*/
-
 @media only screen and (max-width: 600px) {
     
-
     .footer h2 {
         padding-bottom: 1.5rem;
     }
@@ -735,7 +688,6 @@ span {
 
 @media only screen and (min-width: 600px) {
 
-
     #perfil-photo {
         width: 200px;
         height: 213px;
@@ -753,7 +705,6 @@ span {
     .words h3 {
         font-size: 1rem;
     }
-
 
 }
 
@@ -776,30 +727,29 @@ span {
         width: 540px;
         height: 395px;
     }
-
-
-
 }
 
 @media only screen and (width: 768px) {
     .portafolio-conteiner{
         grid-template-columns: repeat(2,1fr);
     }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .card .intro{
+        bottom: 80px;
+        padding: 3px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
 
-    /*.header-content h1{
-        
-    }*/
     .header-content h2 {
 
         padding-right: 3rem;
     }
 
-    /*.header-content h3{
-        
-    }*/
     span {
         font-size: 1.3rem;
     }
@@ -811,8 +761,7 @@ span {
     .header-information {
         flex-direction: row;
         text-align: start;
-        padding: 3.5rem 1.5rem 5rem;
-
+        padding: 5.5rem 1.5rem 5rem;
     }
 
     .social-conteiner {
@@ -827,7 +776,6 @@ span {
     #perfil-photo {
         width: 560px;
         height: 536px;
-
     }
 
     .icon-UA {
@@ -855,7 +803,7 @@ span {
     }
 }
 
-/*560 x 536*/
+
 @media only screen and (min-width: 1024px) {}
 
 @media only screen and (min-width: 1200px) {
@@ -866,7 +814,6 @@ span {
 
     .angulo img {
         width: 700px;
-
     }
 
 }
@@ -884,12 +831,30 @@ span {
 
     .contac {
         display: flex;
-        /* flex-direction: column; */
         flex-direction: row;
         align-items: center;
-        /* justify-content: space-between; */
         justify-content: space-evenly;
         text-align: center;
+    }
+    .card:hover .intro{
+        height: 80%;
+        width: 100%;
+        bottom: 80px;
+        background: #000;
+        transform: scale(1.0,1.0);
+        transition: linear .3s;
+    }
+    .portafolio-img div:hover{
+        transform: scale(1.1);
+        transition: .5s;
+    }
+    .container .skills{
+        opacity: .3;
+    }
+    .container .skills:hover{
+        opacity: 1;
+       transform: scale(.9,.9);
+       transition: all .3s ease .1s;
     }
 }
 
